@@ -7,9 +7,12 @@
 
 import { NewAppScreen } from '@react-native/new-app-screen';
 import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
+import { API_URL } from '@env';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
+
+  console.log('API_URL:', API_URL); // Log the API_URL to verify it's being read correctly
 
   return (
     <View style={styles.container}>
